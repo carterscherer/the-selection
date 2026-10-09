@@ -16,14 +16,12 @@
   <button id="enter" class="enter" hidden>Enter</button>
   <p class="skiphint" id="skiphint">tap to continue</p>
  </div>
- <svg class="gate-mark" aria-label="Signature"><use href="#sig"/></svg>
  <video class="film" autoplay muted loop playsinline><source src="assets/film-overlay.mp4" type="video/mp4"></video>
 </section>
 
 <!-- access card (paywall-ready, see gate.js) -->
 <div id="access" class="access" role="dialog" aria-modal="true" aria-labelledby="access-t" hidden>
  <div class="access-card">
-  <svg class="access-sig"><use href="#sig"/></svg>
   <h2 id="access-t">Request access</h2>
   <p class="price">$0.99 &nbsp;·&nbsp; one-time</p>
   <div id="pay-slot"><!-- Apple Pay / Stripe button mounts here --></div>
@@ -42,7 +40,7 @@
   <a href="#top" class="mark" aria-label="Top"><svg><use href="#sig"/></svg></a>
   <div class="links"><a href="#garage"><i>I</i><span>The Garage</span></a><a href="#watches"><i>II</i><span>Timepieces</span></a><a href="#wardrobe"><i>III</i><span>Wardrobe</span></a><a href="#collections"><i>IV</i><span>Collections</span></a><a href="#places"><i>V</i><span>Places</span></a></div>
  </nav>
- <header class="frontis" id="top"><p class="eyebrow">Private dossier</p><svg class="frontis-sig"><use href="#sig"/></svg><p class="eyebrow dim">Vol. I &nbsp;·&nbsp; Not for circulation</p><p class="dnote" id="dnote"></p></header>
+ <header class="frontis" id="top"><p class="eyebrow">Private dossier</p><p class="eyebrow dim">Vol. I &nbsp;·&nbsp; Not for circulation</p><p class="dnote" id="dnote"></p></header>
 
  <section class="chapter" id="garage"><div class="titlecard"><span class="num">I</span><h2>The Garage</h2><p>Engines kept for the long way home.</p></div><div class="garage"></div></section>
  <section class="chapter" id="watches"><div class="titlecard"><span class="num">II</span><h2>Timepieces &amp; Jewelry</h2><p>Things that are wound, worn and handed down.</p></div><div class="chips" data-for="watches"></div><div class="grid"></div></section>
@@ -67,7 +65,7 @@
    </div>
   </div>
  </section>
- <footer><svg class="foot-sig"><use href="#sig"/></svg>
+ <footer>
  <div class="colophon"><p class="col-h">Colophon</p>
   <p class="col-body">This edition was curated and composed by Random on behalf of C.&nbsp;J.&nbsp;S. He did not design it; it was made for him.</p>
   <p class="col-credit">Image: NASA/ESA/CSA, JWST</p>
