@@ -23,8 +23,25 @@ el.innerHTML=items.map(card).join('')||'<p style="grid-column:1/-1;text-align:ce
 el.querySelectorAll('img').forEach(im=>im.addEventListener('error',()=>{im.outerHTML=init(im.dataset.b)},{once:true}));reveal([...el.children])}
 function chips(k){const box=document.querySelector(`.chips[data-for=${k}]`);box.innerHTML=chipsFor(k).map(c=>`<button class="chip${c===state[k]?' on':''}">${c}</button>`).join('');
 box.onclick=e=>{if(!e.target.matches('.chip'))return;state[k]=e.target.textContent;chips(k);render(k)}}
-function garage(){const el=document.querySelector('.garage');el.innerHTML=(DATA.garage||[]).map(c=>`<article class="car"><div class="ph">${c.image?`<img loading="lazy" src="${esc(c.image)}" alt="${esc(c.name)}" referrerpolicy="no-referrer">`:''}</div>
-<div class="meta"><div><div class="brand">${esc(c.brand)}</div><h3>${esc(c.name)}</h3></div><a class="btn" href="${esc(c.link)}" target="_blank" rel="noopener">View</a></div><p class="note">${esc(c.note)}</p></article>`).join('');reveal([...el.children],140)}
+function garage(){const el=document.querySelector('.garage'),C=DATA.garage||[],n=C.length;if(!n){el.innerHTML='';return}
+const R=k=>{const m=[[10,'X'],[9,'IX'],[5,'V'],[4,'IV'],[1,'I']];let o='';for(const[v,s]of m)while(k>=v){o+=s;k-=v}return o};
+el.className='garage gx';el.setAttribute('role','region');el.setAttribute('aria-roledescription','carousel');el.setAttribute('aria-label','The Garage');el.tabIndex=0;
+el.innerHTML=`<div class="gx-stage">${C.map((c,i)=>`<article class="gx-slide" aria-roledescription="slide" aria-label="${i+1} of ${n}" aria-hidden="true"><div class="gx-ph">${c.image?`<img src="${esc(c.image)}" alt="${esc(c.name)}" referrerpolicy="no-referrer" ${i>1?'loading="lazy"':''} draggable="false">`:''}</div><div class="gx-copy"><div class="gx-brand">${esc(c.brand)}</div><h3 class="gx-name">${esc(c.name)}</h3><p class="gx-note">${esc(c.note)}</p><a class="btn gx-view" href="${esc(c.link)}" target="_blank" rel="noopener" tabindex="-1">View</a></div></article>`).join('')}</div>
+<button class="gx-nav gx-prev" aria-label="Previous car"><span></span></button><button class="gx-nav gx-next" aria-label="Next car"><span></span></button>
+<div class="gx-foot"><div class="gx-idx" aria-live="polite"><b>I</b><i>/</i><span>${R(n)}</span></div><div class="gx-bar"><i></i></div><div class="gx-thumbs">${C.map((c,i)=>`<button aria-label="${esc(c.name)}"><span>${R(i+1)}</span></button>`).join('')}</div></div>`;
+const S=[...el.querySelectorAll('.gx-slide')],T=[...el.querySelectorAll('.gx-thumbs button')],idx=el.querySelector('.gx-idx b'),bar=el.querySelector('.gx-bar i');let cur=-1;
+function go(i,dir){i=(i+n)%n;if(i===cur)return;dir=dir||(i>cur?1:-1);el.style.setProperty('--dir',dir);
+ S.forEach((s,k)=>{const on=k===i,was=k===cur;s.classList.toggle('on',on);s.classList.toggle('out',was);s.setAttribute('aria-hidden',!on);s.querySelector('a').tabIndex=on?0:-1});
+ T.forEach((t,k)=>t.classList.toggle('on',k===i));cur=i;idx.textContent=R(i+1);bar.style.transform=`scaleX(${(i+1)/n})`;
+ const nx=S[(i+1)%n].querySelector('img');if(nx)nx.loading='eager'}
+el.querySelector('.gx-prev').onclick=()=>go(cur-1,-1);el.querySelector('.gx-next').onclick=()=>go(cur+1,1);T.forEach((t,k)=>t.onclick=()=>go(k));
+el.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){go(cur+1,1);e.preventDefault()}if(e.key==='ArrowLeft'){go(cur-1,-1);e.preventDefault()}});
+document.addEventListener('keydown',e=>{if(e.target.closest&&e.target.closest('input,textarea,.gx'))return;const r=el.getBoundingClientRect();if(r.top<innerHeight*.6&&r.bottom>innerHeight*.4){if(e.key==='ArrowRight')go(cur+1,1);if(e.key==='ArrowLeft')go(cur-1,-1)}});
+let x0=null,y0=0,dx=0;const st=el.querySelector('.gx-stage');
+st.addEventListener('pointerdown',e=>{if(e.target.closest('a'))return;x0=e.clientX;y0=e.clientY;dx=0;st.setPointerCapture(e.pointerId)});
+st.addEventListener('pointermove',e=>{if(x0===null)return;dx=e.clientX-x0;if(Math.abs(dx)>Math.abs(e.clientY-y0))el.style.setProperty('--drag',(dx/innerWidth).toFixed(3))});
+const end=()=>{if(x0===null)return;el.style.setProperty('--drag',0);if(Math.abs(dx)>50)go(cur+(dx<0?1:-1),dx<0?1:-1);x0=null};st.addEventListener('pointerup',end);st.addEventListener('pointercancel',end);
+go(0,1)}
 /* Places: places[] = {name, city, lat, lng, note, link, image}. Leaflet + dark tiles load only when places exist. */
 function places(){const P=DATA.places||[];if(!P.length)return;
  const css=document.createElement('link');css.rel='stylesheet';css.href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';document.head.appendChild(css);

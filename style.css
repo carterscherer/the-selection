@@ -113,7 +113,6 @@ footer{text-align:center;padding:90px 0 70px;border-top:1px solid var(--rule);co
 .cursor.big{width:56px;height:56px;margin:-13px 0 0 -13px;background:rgba(176,141,87,.12);border-color:var(--brass)}
 @media (hover:none){.cursor{display:none}}
 @media (max-width:760px){.topnav,.topnav.solid{padding:12px 16px}.topnav .links{gap:13px}.topnav .links span{display:none}.topnav a i{font-size:17px;margin:0}.topnav .mark svg{width:82px;height:30px}
-.garage{grid-template-columns:1fr;gap:44px}.car:first-child .ph{aspect-ratio:16/10}.car .meta{margin-top:-58px;padding:0 16px}.car .note{margin:16px 16px 0}
 .grid{grid-template-columns:repeat(2,1fr);gap:30px 14px}.name{font-size:17px}.chapter{padding:24px 16px}.titlecard{min-height:min(48vh,380px)}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.grain,.pins circle{animation:none}.pins circle{opacity:.5}#gate video{display:none}#gate{background:#140f0b url(assets/hero-poster.jpg) center/cover}
 #sigpath{fill-opacity:1}.whisper,.enter{animation:none;opacity:1}.reveal{opacity:1;transform:none;transition:none}.img img,.car img{transition:none}.cursor{display:none}
@@ -153,3 +152,49 @@ body.still #curtain{visibility:visible}body.still #curtain .seal{animation:none;
 .dnote .ln{display:block}
 @media (max-width:760px){.gnote{font-size:19px}.gate-mark{width:92px;height:32px}}
 @media (prefers-reduced-motion:reduce){.gnote .ln{opacity:1;filter:none;transform:none;transition:none}#gate .enter{opacity:1}}
+
+/* garage carousel: configurator-style showcase */
+.gx{--dir:1;--drag:0;position:relative;width:100vw;margin-left:calc(50% - 50vw);height:min(92vh,900px);min-height:520px;overflow:hidden;background:#0a0908;outline:none;touch-action:pan-y;user-select:none}
+.gx:focus-visible{box-shadow:inset 0 0 0 1px var(--brass)}
+.gx-stage{position:absolute;inset:0;cursor:grab}.gx-stage:active{cursor:grabbing}
+.gx-slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity 1.3s cubic-bezier(.4,0,.2,1),visibility 0s 1.3s}
+.gx-slide.on{opacity:1;visibility:visible;transition:opacity 1.3s cubic-bezier(.4,0,.2,1);z-index:2}
+.gx-slide.out{visibility:visible;z-index:1}
+.gx-ph{position:absolute;inset:0;overflow:hidden}
+.gx-ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.82) contrast(1.06) brightness(.8);transform:translateX(calc(var(--dir)*6%)) scale(1.14);transition:transform 2.4s cubic-bezier(.16,.84,.24,1)}
+.gx-slide.on .gx-ph img{transform:translateX(calc(var(--drag)*12%)) scale(1.02)}
+.gx-slide.out .gx-ph img{transform:translateX(calc(var(--dir)*-8%)) scale(1.08)}
+.gx-ph::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,9,8,.82) 0%,rgba(10,9,8,.35) 42%,transparent 70%),linear-gradient(180deg,rgba(10,9,8,.5) 0%,transparent 22%,transparent 58%,rgba(10,9,8,.92) 100%);pointer-events:none}
+.gx-copy{position:absolute;left:clamp(22px,6vw,96px);bottom:clamp(120px,17vh,170px);max-width:min(760px,84vw);z-index:3}
+.gx-copy>*{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform 1.2s cubic-bezier(.16,.84,.24,1)}
+.gx-slide.on .gx-copy>*{opacity:1;transform:none}
+.gx-slide.on .gx-name{transition-delay:.25s}.gx-slide.on .gx-note{transition-delay:.45s}.gx-slide.on .gx-view{transition-delay:.6s}
+.gx-brand{font-variant:small-caps;letter-spacing:.42em;font-size:13px;color:var(--brass)}
+.gx-name{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(40px,6.4vw,96px);line-height:.98;letter-spacing:-.01em;margin:14px 0 0;color:var(--cream);text-wrap:balance}
+.gx-note{font-style:italic;color:var(--cream2);font-size:clamp(16px,1.35vw,19px);margin:20px 0 26px;max-width:520px}
+.gx-view{display:inline-block;position:relative;color:var(--cream);text-decoration:none;font-variant:small-caps;letter-spacing:.34em;font-size:13px;padding-bottom:3px}
+.gx-view::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:1px;background:var(--brass);transform:scaleX(.35);transform-origin:left;transition:transform .6s cubic-bezier(.2,.7,.2,1)}.gx-view:hover::after{transform:scaleX(1)}
+.gx-nav{position:absolute;top:50%;z-index:4;width:56px;height:56px;margin-top:-28px;border:1px solid rgba(232,223,203,.18);border-radius:50%;background:rgba(10,9,8,.25);backdrop-filter:blur(6px);cursor:pointer;opacity:.55;transition:opacity .4s,border-color .4s}
+.gx-nav:hover,.gx-nav:focus-visible{opacity:1;border-color:var(--brass);outline:none}
+.gx-prev{left:clamp(10px,2.4vw,36px)}.gx-next{right:clamp(10px,2.4vw,36px)}
+.gx-nav span{position:absolute;left:50%;top:50%;width:11px;height:11px;border-top:1px solid var(--cream);border-left:1px solid var(--cream);transform:translate(-30%,-50%) rotate(-45deg)}
+.gx-next span{transform:translate(-70%,-50%) rotate(135deg)}
+.gx-foot{position:absolute;left:clamp(22px,6vw,96px);right:clamp(22px,6vw,96px);bottom:clamp(34px,6vh,58px);z-index:4;display:flex;align-items:center;gap:28px}
+.gx-idx{font-family:'Cormorant Garamond',serif;font-variant:small-caps;letter-spacing:.24em;color:var(--cream2);font-size:15px;white-space:nowrap;min-width:92px}
+.gx-idx b{font-weight:400;color:var(--cream)}.gx-idx i{color:var(--brass2);margin:0 8px;font-style:normal}
+.gx-bar{flex:1;height:1px;background:rgba(232,223,203,.16);position:relative;overflow:hidden}
+.gx-bar i{position:absolute;inset:0;background:var(--brass);transform-origin:left;transform:scaleX(0);transition:transform 1.2s cubic-bezier(.16,.84,.24,1)}
+.gx-thumbs{display:flex;gap:4px}.gx-thumbs button{background:none;border:0;padding:6px 7px;cursor:pointer;font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:.12em;color:var(--dim);transition:color .4s}
+.gx-thumbs button:hover,.gx-thumbs button.on{color:var(--cream)}.gx-thumbs button.on span{border-bottom:1px solid var(--brass)}
+@media (max-width:760px){.gx{height:82vh;min-height:500px}.gx-nav{width:42px;height:42px;margin-top:-21px;top:38%}.gx-thumbs{display:none}.gx-copy{bottom:96px}.gx-note{margin:14px 0 18px}
+.gx-ph::after{background:linear-gradient(180deg,rgba(10,9,8,.45) 0%,transparent 25%,rgba(10,9,8,.55) 52%,rgba(10,9,8,.95) 100%)}.gx-foot{bottom:30px;gap:18px}}
+@media (prefers-reduced-motion:reduce){.gx-slide,.gx-slide.on,.gx-ph img,.gx-copy>*,.gx-bar i{transition:opacity .2s linear!important}.gx-ph img,.gx-slide.on .gx-ph img,.gx-slide.out .gx-ph img{transform:none!important}.gx-copy>*{transform:none!important}}
+
+.col-credit{font-size:12px;letter-spacing:.12em;color:var(--dim);margin-top:10px;font-variant:small-caps}
+/* end screen: JWST HH 211 backdrop */
+footer{position:relative;overflow:hidden;isolation:isolate;min-height:92vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:120px 20px 80px}
+footer::before{content:"";position:absolute;inset:-3%;z-index:-2;background:url(assets/cosmos-hh211.webp) 52% 48.6%/cover no-repeat;filter:brightness(.78) saturate(.9) contrast(1.12);animation:cosdrift 70s ease-in-out infinite alternate}
+footer::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,var(--coal) 0%,rgba(18,17,16,.55) 22%,rgba(10,10,14,.35) 50%,rgba(18,17,16,.7) 78%,var(--coal) 100%),radial-gradient(ellipse at center,transparent 35%,rgba(8,8,10,.7) 100%)}
+footer .colophon{background:rgba(12,11,10,.55);backdrop-filter:blur(6px)}
+@keyframes cosdrift{to{transform:scale(1.07) translate(-1.2%,.7%) rotate(.6deg)}}
+@media (prefers-reduced-motion:reduce){footer::before{animation:none}}

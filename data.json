@@ -19,15 +19,6 @@
    "imagePage": ""
   },
   {
-   "name": "1964 Ferrari 250 GT Lusso",
-   "brand": "Ferrari",
-   "note": "Pininfarina's last word on the 250. Steve McQueen drove one.",
-   "link": "https://www.ferrari.com/en-EN/auto/250-gt-berlinetta-lusso",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Ferrari_250_GT_Lusso_Berlinetta.jpg/1280px-Ferrari_250_GT_Lusso_Berlinetta.jpg",
-   "colorMatch": "Red (classic Rosso)",
-   "imagePage": "https://commons.wikimedia.org/wiki/File:Ferrari_250_GT_Lusso_Berlinetta.jpg"
-  },
-  {
    "name": "Maserati Khamsin",
    "brand": "Maserati",
    "note": "Bertone wedge, named for a desert wind. Order it in green.",
@@ -35,15 +26,6 @@
    "image": "assets/garage/maserati-khamsin-green.jpg",
    "colorMatch": "Dark green; matches",
    "imagePage": ""
-  },
-  {
-   "name": "2027 GMC Sierra 2500HD Denali — Downpour Metallic",
-   "brand": "GMC",
-   "note": "The estate truck. Downpour Metallic is GMC's slate blue-grey for the Denali.",
-   "link": "https://www.gmc.com/trucks/sierra/2500hd-3500hd",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/GMC_Sierra_GMTT1XX_Image_urbaine.jpg/1280px-GMC_Sierra_GMTT1XX_Image_urbaine.jpg",
-   "colorMatch": "Dark blue Sierra HD (older gen); not exact Downpour Metallic",
-   "imagePage": "https://commons.wikimedia.org/wiki/File:GMC_Sierra_GMTT1XX_Image_urbaine.jpg"
   },
   {
    "name": "Porsche 911 Carrera (992) — Grey",
@@ -61,6 +43,15 @@
    "link": "https://www.revology.com/",
    "image": "assets/garage/shelby-gt500-convertible.jpg",
    "colorMatch": "Dark blue metallic; matches",
+   "imagePage": ""
+  },
+  {
+   "name": "Ferrari 12Cilindri Manuale",
+   "brand": "Ferrari",
+   "note": "A front-mounted V12 with a gated manual. Rosso, parked where the road gives out.",
+   "link": "https://www.ferrari.com/en-EN/auto/ferrari-12cilindri",
+   "image": "assets/garage/ferrari-12cilindri-manuale-red.jpg",
+   "colorMatch": "Red; matches",
    "imagePage": ""
   }
  ],
