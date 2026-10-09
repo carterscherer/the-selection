@@ -1,4 +1,69 @@
 {
+ "garage": [
+  {
+   "name": "Aston Martin DB12 Volante",
+   "brand": "Aston Martin",
+   "note": "Open-top grand tourer; spec it in champagne and drive it at dusk.",
+   "link": "https://www.astonmartin.com/en/models/db12-volante",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Aston_Martin_DB12_Volante_IMG_9314.jpg/1280px-Aston_Martin_DB12_Volante_IMG_9314.jpg",
+   "colorMatch": "Silver; not rose gold or champagne",
+   "imagePage": "https://commons.wikimedia.org/wiki/File:Aston_Martin_DB12_Volante_IMG_9314.jpg"
+  },
+  {
+   "name": "Lamborghini Murciélago LP640",
+   "brand": "Lamborghini",
+   "note": "The bat-winged bull from Batman Begins. Grey, quiet, menacing.",
+   "link": "https://en.wikipedia.org/wiki/Lamborghini_Murci%C3%A9lago",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Gray_Lamborghini_LP640.jpg/1280px-Gray_Lamborghini_LP640.jpg",
+   "colorMatch": "Grey; matches",
+   "imagePage": "https://commons.wikimedia.org/wiki/File:Gray_Lamborghini_LP640.jpg"
+  },
+  {
+   "name": "1964 Ferrari 250 GT Lusso",
+   "brand": "Ferrari",
+   "note": "Pininfarina's last word on the 250. Steve McQueen drove one.",
+   "link": "https://www.ferrari.com/en-EN/auto/250-gt-berlinetta-lusso",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Ferrari_250_GT_Lusso_Berlinetta.jpg/1280px-Ferrari_250_GT_Lusso_Berlinetta.jpg",
+   "colorMatch": "Red (classic Rosso)",
+   "imagePage": "https://commons.wikimedia.org/wiki/File:Ferrari_250_GT_Lusso_Berlinetta.jpg"
+  },
+  {
+   "name": "Maserati Khamsin",
+   "brand": "Maserati",
+   "note": "Bertone wedge, named for a desert wind. Order it in green.",
+   "link": "https://en.wikipedia.org/wiki/Maserati_Khamsin",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Maserati_Khamsin_brown.jpg/1280px-Maserati_Khamsin_brown.jpg",
+   "colorMatch": "Bronze-brown; no green found",
+   "imagePage": "https://commons.wikimedia.org/wiki/File:Maserati_Khamsin_brown.jpg"
+  },
+  {
+   "name": "2027 GMC Sierra 2500HD Denali — Downpour Metallic",
+   "brand": "GMC",
+   "note": "The estate truck. Downpour Metallic is GMC's slate blue-grey for the Denali.",
+   "link": "https://www.gmc.com/trucks/sierra/2500hd-3500hd",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/GMC_Sierra_GMTT1XX_Image_urbaine.jpg/1280px-GMC_Sierra_GMTT1XX_Image_urbaine.jpg",
+   "colorMatch": "Dark blue Sierra HD (older gen); not exact Downpour Metallic",
+   "imagePage": "https://commons.wikimedia.org/wiki/File:GMC_Sierra_GMTT1XX_Image_urbaine.jpg"
+  },
+  {
+   "name": "Porsche 911 Turbo S — Black",
+   "brand": "Porsche",
+   "note": "All-wheel drive, all-weather, all black. Hides in plain sight.",
+   "link": "https://www.porsche.com/usa/models/911/",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Porsche_911_Turbo_S_991.2_black_%281%29.jpg/1280px-Porsche_911_Turbo_S_991.2_black_%281%29.jpg",
+   "colorMatch": "Black; matches (991.2 generation)",
+   "imagePage": "https://commons.wikimedia.org/wiki/File:Porsche_911_Turbo_S_991.2_black_(1).jpg"
+  },
+  {
+   "name": "Honda CB750 Café Racer",
+   "brand": "Honda",
+   "note": "The original superbike, stripped to a café racer for early mornings.",
+   "link": "https://en.wikipedia.org/wiki/Honda_CB750",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Honda_CB750_Cafe_Racer_59.jpg",
+   "colorMatch": "Black café racer; matches the style",
+   "imagePage": "https://commons.wikimedia.org/wiki/File:Honda_CB750_Cafe_Racer_59.jpg"
+  }
+ ],
  "watches": [
   {
    "name": "Hamburg Automatik - Silver",
@@ -1912,5 +1977,6 @@
    "image": "https://poolhousenewyork.com/cdn/shop/collections/crosshatchtokyostraightwidejeansrawdenimselvedgeblackjeansmadeinusajapaneseblck_75b8e6ec-46bc-4b96-8731-2fb2bd5a5bc2.jpg?v=1779490657",
    "imageSource": "original"
   }
- ]
+ ],
+ "places": []
 }
