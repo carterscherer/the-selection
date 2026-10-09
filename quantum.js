@@ -32,6 +32,10 @@
       easing:pick(['cubic-bezier(.6,.05,.3,1)','cubic-bezier(.45,0,.25,1)','cubic-bezier(.7,0,.2,1)','cubic-bezier(.3,.1,.3,1)']),
       grain:+(0.035+R()*0.05).toFixed(3), angle:Math.round(R()*360), edition:(value%9973)+1, rand:R,
       phrase:{open:pick(OPEN),lean:pick(LEAN),reach:pick(REACH),ink:pick(INK[slow?'slow':'quick']),coda:pick(CODA)}};
+    const t=s.at.toLocaleString([], {weekday:'long',hour:'numeric',minute:'2-digit'});
+    const src=s.quantum?'drawn from the quantum vacuum':'drawn from a classical fallback';
+    s.noteLines=[s.phrase.open, `Seed <code>${s.hex}</code>, ${src}, ${t}.`, `${s.phrase.lean} <em>${s.mood}</em>,`, `${s.phrase.reach} ${s.accent.word} and ${s.phrase.ink}.`, s.phrase.coda];
+    s.noteShort=[`Composed by Random &middot; Seed <code>${s.hex}</code> &middot; ${t}.`, `Tonight: <em>${s.mood}</em>, in ${s.accent.word}.`];
     return s}
   function apply(s){const r=document.documentElement.style;r.setProperty('--brass',s.accent.c);r.setProperty('--brass2',s.accent.c2);
     r.setProperty('--grain',s.grain);r.setProperty('--angle',s.angle+'deg')}
