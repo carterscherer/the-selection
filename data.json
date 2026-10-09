@@ -242,7 +242,7 @@
    "price": "$1,300 (sold)",
    "link": "https://igor-nekraha.artfond.me/en/artworks/view-of-the-south-bridge",
    "type": "Product",
-   "image": "https://igor-nekraha.artfond.me/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTA1NTY1LCJwdXIiOiJibG9iX2lkIn19--4645aba4076d283de2956ccb5cd9056b7424abb5/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fbGltaXQiOls5MDAsOTAwXSwic2F2ZXIiOnsicXVhbGl0eSI6ODB9fSwicHVyIjoidmFyaWF0aW9uIn19--f5f31055ae0c4b17b549819fd3db3ae5676593c5/139.jpg?locale=en",
+   "image": "https://igor-nekraha.artfond.me/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTA1NTY1LCJwdXIiOiJibG9iX2lkIn19--4645aba4076d283de2956ccb5cd9056b7424abb5/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fbGltaXQiOls5MDAsOTAwX",
    "imageSource": "original"
   },
   {
@@ -296,17 +296,8 @@
    "price": "$1,595 (listing ended)",
    "link": "https://reverb.com/item/7770010-crafters-of-tennessee-tut-taylor-ttt-resonator-dobro-tea-burst",
    "type": "Product",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Gann_squareneck_resonator_guitar_by_Don_Gann_-_ResoSummit_2012_%282012-11-10_12.53.33_by_brad_bechtel%29.jpg/960px-Gann_squareneck_resonator_guitar_by_Don_Gann_-_ResoSummit_2012_%282012-11-10_12.53.33_by_brad_bechtel%29.jpg",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Gann_squareneck_resonator_guitar_by_Don_Gann_-_ResoSummit_2012_%282012-11-10_12.53.33_by_brad_bechtel%29.jpg/960px-Gann_squareneck_resonator_guitar_by_Don_Gann_-_ResoSummit_2012_%282012-11-10_12.53.",
    "imageSource": "stand-in"
-  },
-  {
-   "name": "Mercari listing m62278288920 (name unavailable)",
-   "brand": "Mercari",
-   "price": "",
-   "link": "https://www.mercari.com/us/item/m62278288920/",
-   "type": "Product",
-   "image": "",
-   "imageSource": ""
   },
   {
    "name": "Dymatize Super Mass Gainer",
@@ -498,15 +489,6 @@
    "imageSource": "stand-in"
   },
   {
-   "name": "NEX Power 15 kW GenSet Gas Micro-Generator",
-   "brand": "Uncrewed Systems",
-   "price": "",
-   "link": "https://www.uncrewed-systems.com/nex-power-15-kw-genset-gas-micro-generator/",
-   "type": "Product",
-   "image": "https://www.uncrewed-systems.com/content/uploads/2025/08/NEX-PO1-scaled.jpg",
-   "imageSource": "original"
-  },
-  {
    "name": "Leopard Lola Blanket",
    "brand": "Lola Blankets",
    "price": "$425.00",
@@ -514,15 +496,6 @@
    "type": "Product",
    "image": "https://cdn.shopify.com/s/files/1/0538/5931/9979/files/PDPMOBILE_LEOPARD_SHADOWREV.jpg?v=1783446627",
    "imageSource": "original"
-  },
-  {
-   "name": "MG LFP 24V Battery",
-   "brand": "MG Energy Systems",
-   "price": "",
-   "link": "https://www.mgenergysystems.eu/en/products/lfp-24v/",
-   "type": "Product",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Lithium_Iron_Phosphate_LiFePO4_Cells_400_Ah_Amp_Hours_3.25_Volts_-_5.jpg/960px-Lithium_Iron_Phosphate_LiFePO4_Cells_400_Ah_Amp_Hours_3.25_Volts_-_5.jpg",
-   "imageSource": "stand-in"
   },
   {
    "name": "Maestro Dobel Diamante Tequila Cristalino",
@@ -579,15 +552,6 @@
    "imageSource": "original"
   },
   {
-   "name": "AliExpress item 2251832790169186 (name unavailable)",
-   "brand": "AliExpress",
-   "price": "",
-   "link": "https://www.aliexpress.us/item/2251832790169186.html",
-   "type": "Product",
-   "image": "",
-   "imageSource": ""
-  },
-  {
    "name": "ROSENMANDEL Room Darkening Curtains (1 pair, yellow-beige)",
    "brand": "IKEA",
    "price": "$29.99",
@@ -603,15 +567,6 @@
    "link": "https://lolablankets.com/products/leopard-lola-original-pillow?variant=53676063162740",
    "type": "Product",
    "image": "https://cdn.shopify.com/s/files/1/0538/5931/9979/files/LEOPARD_SQUARE.jpg?v=1783444209",
-   "imageSource": "original"
-  },
-  {
-   "name": "Lumenier ELITE PRO 100A V2 6-12S BLHeli_32 4-in-1 ESC",
-   "brand": "GetFPV",
-   "price": "$519.99",
-   "link": "https://www.getfpv.com/lumenier-elite-pro-100a-v2-6-12s-blheli-32-4-in-1-esc.html",
-   "type": "Product",
-   "image": "https://www.getfpv.com/media/catalog/product/cache/f37f40fac2a7f4f1216822a65073de58/l/u/lumenier-elite-pro-100a-v2-6-12s-blheli_32-4-in-1-esc---main.jpg",
    "imageSource": "original"
   },
   {
@@ -666,15 +621,6 @@
    "link": "https://raith-clo.com/products/massira-elasticated-waist-swim-short-navy-ecru?variant=55187900891521",
    "type": "Product",
    "image": "https://cdn.shopify.com/s/files/1/2661/1592/files/243_5822bad5-39bd-4983-be99-38baab675b0d.jpg?v=1779206569",
-   "imageSource": "original"
-  },
-  {
-   "name": "Shop item 8634916307094 (name unavailable)",
-   "brand": "Shop (Shopify)",
-   "price": "",
-   "link": "https://shop.app/products/8634916307094?variantId=46313873801366",
-   "type": "Product",
-   "image": "https://shopify-assets.shopifycdn.com/shop-assets/static_uploads/web/shop_logo/shop-logo-default.png",
    "imageSource": "original"
   },
   {
@@ -737,8 +683,8 @@
    "price": "",
    "link": "https://www.coach.com/products/rexy-cropped-polo/CDI63-Y05.html",
    "type": "Product",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/WP_polo_shirt_FRONT_Merchandise_shots-24_cropped.jpg/960px-WP_polo_shirt_FRONT_Merchandise_shots-24_cropped.jpg",
-   "imageSource": "stand-in"
+   "image": "",
+   "imageSource": "none"
   },
   {
    "name": "Hello Klean Shower Head",
@@ -764,8 +710,8 @@
    "price": "",
    "link": "https://www.birchlane.com/outdoor/pdp/birch-lane-fleur-square-2-person-235-long-bistro-set-with-cushions-b000241851.html?piid=1570216240",
    "type": "Product",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Constant_Set_D_-_CK_Bistro_2023-12-21.jpg/960px-Constant_Set_D_-_CK_Bistro_2023-12-21.jpg",
-   "imageSource": "stand-in"
+   "image": "",
+   "imageSource": "none"
   },
   {
    "name": "Vortex",
@@ -786,24 +732,6 @@
    "imageSource": "stand-in"
   },
   {
-   "name": "HRB 3S Hardcase 11.1V LiPo Battery 6000mAh 60C Dean T/TRX Female Plug for RC Car Truck",
-   "brand": "HRB-POWER",
-   "price": "$45.65",
-   "link": "https://hrb-power.com/products/hrb-3s-hardcase-11-1v-lipo-battery-6000mah-60c-dean-t-trx-female-plug-for-rc-car-truck",
-   "type": "Product",
-   "image": "https://cdn.shopify.com/s/files/1/0502/7063/4176/products/11.1v6000hardcaselipobattery3S.jpg?v=1686129070",
-   "imageSource": "original"
-  },
-  {
-   "name": "RDQ Series 22.2V 6S 6000mAh 100C LiPo Battery - XT90 Anti Spark",
-   "brand": "RaceDayQuads",
-   "price": "$134.99",
-   "link": "https://www.racedayquads.com/products/rdq-series-22-2v-6s-6000mah-100c-lipo-battery-xt90-anti-spark",
-   "type": "Product",
-   "image": "https://cdn.shopify.com/s/files/1/1285/4651/products/gnb-rdq-series-22-2v-6s-6000mah-100c-lipo-battery-xt90-anti-spark-battery-29090435760241.jpg?v=1762441383",
-   "imageSource": "original"
-  },
-  {
    "name": "Men's Reed Fisherman Mini Lug Brown",
    "brand": "G.H. Bass",
    "price": "$79.98",
@@ -819,15 +747,6 @@
    "link": "https://lolablankets.com/products/star-spangled-navy",
    "type": "Product",
    "image": "https://cdn.shopify.com/s/files/1/0538/5931/9979/files/STARSPANGLEDNAVY_FLAT.jpg?v=1783452061",
-   "imageSource": "original"
-  },
-  {
-   "name": "Essential Performance Pre-Workout",
-   "brand": "Get Raw Nutrition",
-   "price": "$39.99",
-   "link": "https://getrawnutrition.com/products/essential-performance",
-   "type": "Product",
-   "image": "https://cdn.shopify.com/s/files/1/0932/3141/5614/files/RAW_Signature_Essential_Performance_Sour_Blood_Orange_x_Sara_Saffari_Mockup.png?v=1788370961",
    "imageSource": "original"
   },
   {
@@ -935,7 +854,7 @@
    "price": "",
    "link": "https://www.coach.com/products/bolt-runner-sneaker/CDE29-YNG.html",
    "type": "Product",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/White_Sneakers_-_Coach_%2849688016318%29.jpg/960px-White_Sneakers_-_Coach_%2849688016318%29.jpg",
+   "image": "",
    "imageSource": "stand-in"
   },
   {
@@ -1011,15 +930,6 @@
    "imageSource": "original"
   },
   {
-   "name": "ZOHD Dart XL Extreme1000mm BEPP FPV RC Airplane - Unassembled Kit",
-   "brand": "GetFPV",
-   "price": "$129.99",
-   "link": "https://www.getfpv.com/zohd-dart-xl-extreme1000mm-bepp-fpv-rc-airplane-unassembled-kit.html",
-   "type": "Product",
-   "image": "https://www.getfpv.com/media/catalog/product/cache/f37f40fac2a7f4f1216822a65073de58/2/_/2_5_16.jpg",
-   "imageSource": "original"
-  },
-  {
    "name": "Mirra 2 Stool",
    "brand": "Herman Miller",
    "price": "$1,840.00",
@@ -1034,7 +944,7 @@
    "price": "",
    "link": "https://jmy.art/artwork/165000888",
    "type": "Product",
-   "image": "https://www.datocms-assets.com/74560/1771610406-klockspelet_6_sq.png?fm=webp&q=40&w=2560",
+   "image": "",
    "imageSource": "stand-in"
   },
   {
@@ -1151,7 +1061,7 @@
    "price": "$525.00",
    "link": "https://www.tecovas.com/products/the-earl?color=obsidian-lizard",
    "type": "Product",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Cowboy_boots_IMGP9037.jpg/960px-Cowboy_boots_IMGP9037.jpg",
+   "image": "",
    "imageSource": "stand-in"
   },
   {
@@ -1380,15 +1290,6 @@
    "imageSource": "stand-in"
   },
   {
-   "name": "Sauvage Parfum",
-   "brand": "Dior",
-   "price": "$210.00",
-   "link": "https://www.dior.com/en_us/beauty/products/sauvage-parfum-C099600456.html",
-   "type": "Product",
-   "image": "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dwe7638975/Y0998004/Y0998004_C099600456_E01_GHC.jpg",
-   "imageSource": "original"
-  },
-  {
    "name": "Camel Mesh Shorts - Yellow",
    "brand": "JT Racing USA",
    "price": "$45.00",
@@ -1539,15 +1440,6 @@
    "link": "https://lenysworld.com/products/blue-velvet",
    "type": "Product",
    "image": "https://cdn.shopify.com/s/files/1/0605/4713/7733/files/Lenny-Producr35t-2.png?v=1700242121",
-   "imageSource": "original"
-  },
-  {
-   "name": "Dior Sauvage Eau Forte Parfum 2.0 oz",
-   "brand": "Ulta Beauty",
-   "price": "$168.00",
-   "link": "https://www.ulta.com/p/sauvage-eau-forte-parfum-pimprod2046621?sku=2629127",
-   "type": "Product",
-   "image": "https://media.ulta.com/i/ulta/2629126?w=500&h=500",
    "imageSource": "original"
   },
   {
@@ -1954,7 +1846,7 @@
    "price": "",
    "link": "https://www.sabah.am/collections/sandals",
    "type": "Collection",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Pair_of_sandals_with_probably_modern_wooden_sole%2C_leather_-_Museo_Egizio%2C_Turin_S_8411_p02.jpg/960px-Pair_of_sandals_with_probably_modern_wooden_sole%2C_leather_-_Museo_Egizio%2C_Turin_S_8411_p02.jpg",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Pair_of_sandals_with_probably_modern_wooden_sole%2C_leather_-_Museo_Egizio%2C_Turin_S_8411_p02.jpg/960px-Pair_of_sandals_with_probably_modern_wooden_sole%2C_leather_-_Museo_Egizio%2C_Turin_S_8411_p0",
    "imageSource": "stand-in"
   },
   {
