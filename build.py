@@ -19,5 +19,7 @@ for tab,key in [('Watches & Jewelry','watches'),('Products','wardrobe'),('Collec
     out[key]=[{'name':d['Name'],'brand':d.get('Brand/store') or '','price':d.get('Price') or '','link':d.get('Link') or '','type':d.get('Type') or '','image':img(d.get('Thumbnail')),'imageSource':d.get('Image source') or ''} for d in rows(tab)]
 # places[] = {name, city, lat, lng, note, link, image}; add a 'Places' tab with those columns to populate
 out['places']=[{'name':d['name'] if 'name' in d else d.get('Name'),'city':d.get('City',''),'lat':d.get('Lat'),'lng':d.get('Lng'),'note':d.get('Note',''),'link':d.get('Link',''),'image':img(d.get('Thumbnail')) or d.get('Image','')} for d in rows('Places')]
+B='https://carterscherer.github.io/the-selection/'
+for g in out['garage']: g['image']=g['image'].replace(B,'')
 json.dump(out,open('data.json','w'),indent=1,ensure_ascii=False,default=str)
 print({k:len(v) for k,v in out.items()})

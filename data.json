@@ -5,9 +5,9 @@
    "brand": "Aston Martin",
    "note": "Open-top grand tourer; spec it in champagne and drive it at dusk.",
    "link": "https://www.astonmartin.com/en/models/db12-volante",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Aston_Martin_DB12_Volante_IMG_9314.jpg/1280px-Aston_Martin_DB12_Volante_IMG_9314.jpg",
-   "colorMatch": "Silver; not rose gold or champagne",
-   "imagePage": "https://commons.wikimedia.org/wiki/File:Aston_Martin_DB12_Volante_IMG_9314.jpg"
+   "image": "assets/garage/aston-db12-volante.jpg",
+   "colorMatch": "Silver/champagne; matches",
+   "imagePage": "Alternates: https://carterscherer.github.io/the-selection/assets/garage/aston-db12-volante-top.jpg , https://carterscherer.github.io/the-selection/assets/garage/aston-db12-volante-front.jpg"
   },
   {
    "name": "Lamborghini Murciélago LP640",
@@ -32,9 +32,9 @@
    "brand": "Maserati",
    "note": "Bertone wedge, named for a desert wind. Order it in green.",
    "link": "https://en.wikipedia.org/wiki/Maserati_Khamsin",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Maserati_Khamsin_brown.jpg/1280px-Maserati_Khamsin_brown.jpg",
-   "colorMatch": "Bronze-brown; no green found",
-   "imagePage": "https://commons.wikimedia.org/wiki/File:Maserati_Khamsin_brown.jpg"
+   "image": "assets/garage/maserati-khamsin-green.jpg",
+   "colorMatch": "Dark green; matches",
+   "imagePage": ""
   },
   {
    "name": "2027 GMC Sierra 2500HD Denali — Downpour Metallic",
@@ -46,13 +46,13 @@
    "imagePage": "https://commons.wikimedia.org/wiki/File:GMC_Sierra_GMTT1XX_Image_urbaine.jpg"
   },
   {
-   "name": "Porsche 911 Turbo S — Black",
+   "name": "Porsche 911 Carrera (992) — Grey",
    "brand": "Porsche",
-   "note": "All-wheel drive, all-weather, all black. Hides in plain sight.",
+   "note": "The everyday 911, in grey, shot on film in a concrete garage.",
    "link": "https://www.porsche.com/usa/models/911/",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Porsche_911_Turbo_S_991.2_black_%281%29.jpg/1280px-Porsche_911_Turbo_S_991.2_black_%281%29.jpg",
-   "colorMatch": "Black; matches (991.2 generation)",
-   "imagePage": "https://commons.wikimedia.org/wiki/File:Porsche_911_Turbo_S_991.2_black_(1).jpg"
+   "image": "assets/garage/porsche-911-carrera-grey.jpg",
+   "colorMatch": "Grey; matches (plate blurred)",
+   "imagePage": ""
   },
   {
    "name": "Honda CB750 Café Racer",
@@ -62,6 +62,15 @@
    "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Honda_CB750_Cafe_Racer_59.jpg",
    "colorMatch": "Black café racer; matches the style",
    "imagePage": "https://commons.wikimedia.org/wiki/File:Honda_CB750_Cafe_Racer_59.jpg"
+  },
+  {
+   "name": "Shelby GT500 Convertible, Dark Blue Metallic",
+   "brand": "Revology",
+   "note": "A 1960s Shelby GT500 convertible, reborn by Revology. Not just blue: Dark Blue Metallic.",
+   "link": "https://www.revology.com/",
+   "image": "assets/garage/shelby-gt500-convertible.jpg",
+   "colorMatch": "Dark blue metallic; matches",
+   "imagePage": ""
   }
  ],
  "watches": [
