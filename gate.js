@@ -67,9 +67,10 @@
     const p = document.getElementById('sigpath'), svg = p.closest('svg');
     if (RM) { svg.classList.add('drawn'); return; }
     const L = p.getTotalLength(); p.style.strokeDasharray = L; p.style.strokeDashoffset = L; p.getBoundingClientRect();
-    p.style.transition = 'stroke-dashoffset 3.8s cubic-bezier(.6,.05,.3,1)';
+    const s = window.__seed || {drawMs:3800, easing:'cubic-bezier(.6,.05,.3,1)'};
+    p.style.transition = `stroke-dashoffset ${s.drawMs}ms ${s.easing}`;
     requestAnimationFrame(()=> p.style.strokeDashoffset = 0);
-    setTimeout(()=> svg.classList.add('drawn'), 3000);
+    setTimeout(()=> svg.classList.add('drawn'), s.drawMs*0.8);
   }
 
   window.Gate = { isUnlocked, grantAccess, startCheckout, verifyAccess, openAccessCard, cinematicUnlock };
@@ -78,6 +79,7 @@
     if (qs.get('demo') === 'reset') localStorage.removeItem(KEY);
     if (await verifyAccess()) grantAccess();
     if (isUnlocked() && qs.get('demo') !== 'unlocking' && qs.get('demo') !== 'gate') { showBook(); return; }
+    try { await Promise.race([window.__seedReady, new Promise(r=>setTimeout(r,1800))]); } catch(e){}
     drawSignature();
     $('#enter').addEventListener('click', () => PAYWALL_ENABLED ? openAccessCard() : cinematicUnlock());
     if (qs.get('demo') === 'unlocking') setTimeout(cinematicUnlock, 300);

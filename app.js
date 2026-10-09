@@ -33,7 +33,14 @@ function places(){const P=DATA.places||[];if(!P.length)return;
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
   P.forEach(p=>L.circleMarker([p.lat,p.lng],{radius:6,color:'#b08d57',fillColor:'#b08d57',fillOpacity:.7,weight:1}).addTo(map).bindPopup(`<b>${esc(p.name)}</b><br>${esc(p.note)}${p.link?`<br><a href="${esc(p.link)}" target="_blank" rel="noopener">View</a>`:''}`))};document.head.appendChild(s)}
 function nav(){const n=document.getElementById('topnav');const onS=()=>{n.classList.toggle('solid',scrollY>80);let cur='';document.querySelectorAll('.chapter').forEach(c=>{if(c.getBoundingClientRect().top<innerHeight*.4)cur=c.id});n.querySelectorAll('.links a').forEach(a=>a.classList.toggle('cur',a.getAttribute('href')==='#'+cur))};addEventListener('scroll',onS,{passive:true});onS()}
-function open(){fetch('data.json').then(r=>r.json()).then(d=>{DATA=d;garage();for(const k of ['watches','wardrobe','collections']){chips(k);render(k)}places();
+function composeNote(){const s=window.__seed;if(!s)return;const t=s.at.toLocaleString([], {weekday:'long',hour:'numeric',minute:'2-digit'});
+ const src=s.quantum?'drawn from the quantum vacuum':'drawn, tonight, from a classical fallback';
+ const el=document.getElementById('dnote');el.innerHTML=`${s.phrase.open} Seed <code>${s.hex}</code>, ${src}, ${esc(t)}. ${s.phrase.lean} <em>${esc(s.mood)}</em>, ${s.phrase.reach} ${esc(s.accent.word)} and ${s.phrase.ink}. ${s.phrase.coda}<span class="sigline">— Random</span>`;
+ requestAnimationFrame(()=>el.classList.add('on'));
+ const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v};set('c-ed','No. '+s.edition);set('c-seed',s.hex);set('c-src',s.source);set('c-acc',s.accent.word);set('c-mood',s.mood)}
+function seededOrder(arr){const s=window.__seed;if(!s||!arr.length)return arr;const R=s.rand,a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(R()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function open(){Promise.race([(window.__seedReady||Promise.resolve()).catch(()=>{}),new Promise(r=>setTimeout(r,1800))]).then(()=>{composeNote();load()})}
+function load(){fetch('data.json').then(r=>r.json()).then(d=>{DATA=d;DATA.garage=seededOrder(DATA.garage||[]);garage();for(const k of ['watches','wardrobe','collections']){chips(k);render(k)}places();
  reveal([...document.querySelectorAll('.titlecard')],0);
  const only=QS.get('only');if(only){document.querySelectorAll('.chapter,.frontis').forEach(s=>{if(s.id!==only)s.style.display='none'})}
  if(location.hash)setTimeout(()=>document.querySelector(location.hash)?.scrollIntoView(),50)});
