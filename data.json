@@ -14,9 +14,9 @@
    "brand": "Lamborghini",
    "note": "The bat-winged bull from Batman Begins. Grey, quiet, menacing.",
    "link": "https://en.wikipedia.org/wiki/Lamborghini_Murci%C3%A9lago",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Gray_Lamborghini_LP640.jpg/1280px-Gray_Lamborghini_LP640.jpg",
-   "colorMatch": "Grey; matches",
-   "imagePage": "https://commons.wikimedia.org/wiki/File:Gray_Lamborghini_LP640.jpg"
+   "image": "assets/garage/lamborghini-murcielago-grey.jpg",
+   "colorMatch": "Grey; matches (sticker blurred)",
+   "imagePage": ""
   },
   {
    "name": "1964 Ferrari 250 GT Lusso",
@@ -53,15 +53,6 @@
    "image": "assets/garage/porsche-911-carrera-grey.jpg",
    "colorMatch": "Grey; matches (plate blurred)",
    "imagePage": ""
-  },
-  {
-   "name": "Honda CB750 Café Racer",
-   "brand": "Honda",
-   "note": "The original superbike, stripped to a café racer for early mornings.",
-   "link": "https://en.wikipedia.org/wiki/Honda_CB750",
-   "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Honda_CB750_Cafe_Racer_59.jpg",
-   "colorMatch": "Black café racer; matches the style",
-   "imagePage": "https://commons.wikimedia.org/wiki/File:Honda_CB750_Cafe_Racer_59.jpg"
   },
   {
    "name": "Shelby GT500 Convertible, Dark Blue Metallic",
