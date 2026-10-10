@@ -18,7 +18,7 @@ out['garage']=[{'name':d['Name'],'brand':d.get('Brand/store') or '','note':d.get
 for tab,key in [('Watches & Jewelry','watches'),('Products','wardrobe'),('Collections','collections')]:
     out[key]=[{'name':d['Name'],'brand':d.get('Brand/store') or '','price':d.get('Price') or '','link':d.get('Link') or '','type':d.get('Type') or '','image':img(d.get('Thumbnail')),'imageSource':d.get('Image source') or ''} for d in rows(tab)]
 # places[] = {name, city, lat, lng, note, link, image}; add a 'Places' tab with those columns to populate
-out['places']=[{'name':d['name'] if 'name' in d else d.get('Name'),'city':d.get('City',''),'lat':d.get('Lat'),'lng':d.get('Lng'),'note':d.get('Note',''),'link':d.get('Link',''),'image':img(d.get('Thumbnail')) or d.get('Image','')} for d in rows('Places')]
+out['places']=[{'name':d.get('Name') or d.get('name'),'city':d.get('Location') or d.get('City') or '','lat':float(d['Lat']),'lng':float(d['Lng']),'note':d.get('Note') or '','link':d.get('Directions') or d.get('Link') or f"https://www.google.com/maps/dir/?api=1&destination={d['Lat']},{d['Lng']}",'image':img(d.get('Thumbnail'))} for d in rows('Places') if d.get('Lat') is not None]
 B='https://carterscherer.github.io/the-selection/'
 for k in ('garage','watches','wardrobe','collections'):
     for g in out[k]: g['image']=g['image'].replace(B,'')

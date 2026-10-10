@@ -43,12 +43,26 @@ st.addEventListener('pointermove',e=>{if(x0===null)return;dx=e.clientX-x0;if(Mat
 const end=()=>{if(x0===null)return;el.style.setProperty('--drag',0);if(Math.abs(dx)>50)go(cur+(dx<0?1:-1),dx<0?1:-1);x0=null};st.addEventListener('pointerup',end);st.addEventListener('pointercancel',end);
 go(0,1)}
 /* Places: places[] = {name, city, lat, lng, note, link, image}. Leaflet + dark tiles load only when places exist. */
-function places(){const P=DATA.places||[];if(!P.length)return;
- const css=document.createElement('link');css.rel='stylesheet';css.href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';document.head.appendChild(css);
- const s=document.createElement('script');s.src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';s.onload=()=>{const m=document.getElementById('map');m.hidden=false;document.querySelector('.map-teaser').hidden=true;
-  const map=L.map(m,{scrollWheelZoom:false}).setView([P[0].lat,P[0].lng],13);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
-  P.forEach(p=>L.circleMarker([p.lat,p.lng],{radius:6,color:'#b08d57',fillColor:'#b08d57',fillOpacity:.7,weight:1}).addTo(map).bindPopup(`<b>${esc(p.name)}</b><br>${esc(p.note)}${p.link?`<br><a href="${esc(p.link)}" target="_blank" rel="noopener">View</a>`:''}`))};document.head.appendChild(s)}
+function places(){const P=DATA.places||[],wrap=document.querySelector('.places-wrap');if(!P.length){wrap.hidden=true;return}
+ const REG=p=>/paris/i.test(p.city)?'Paris':/normandy/i.test(p.city)?'Normandy':/california|san francisco/i.test(p.city)?'California':'Elsewhere';
+ const list=document.querySelector('.pl-list'),regs=['Everywhere',...['California','Paris','Normandy','Elsewhere'].filter(r=>P.some(p=>REG(p)===r))];
+ list.innerHTML=P.map((p,i)=>`<li class="pl-card" data-i="${i}" data-r="${REG(p)}"><span class="pl-n">${String(i+1).padStart(2,'0')}</span><div class="pl-b"><div class="pl-loc">${esc(p.city.toLowerCase())}</div><h3 class="pl-name"><button type="button" class="pl-go">${esc(p.name)}</button></h3><p class="pl-note">${esc(p.note)}</p><a class="pl-dir" href="${esc(p.link)}" target="_blank" rel="noopener">directions<span aria-hidden="true">→</span></a></div></li>`).join('');
+ const rb=document.querySelector('.pl-regions');rb.innerHTML=regs.map((r,i)=>`<button type="button" class="pl-reg${i?'':' on'}" data-r="${r}">${r.toLowerCase()}</button>`).join('');
+ reveal([...list.children],60);
+ const go=()=>{if(!window.L)return;const m=document.getElementById('map');
+  const map=L.map(m,{scrollWheelZoom:false,zoomControl:true,attributionControl:true,worldCopyJump:true});
+  const E='https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/';
+  L.tileLayer(E+'World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',{attribution:'Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors',maxZoom:16}).addTo(map);
+  L.tileLayer(E+'World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,opacity:.75}).addTo(map);
+  const icon=n=>L.divIcon({className:'pl-pin',html:`<span>${n}</span>`,iconSize:[26,26],iconAnchor:[13,13]});
+  const M=P.map((p,i)=>L.marker([p.lat,p.lng],{icon:icon(i+1),title:p.name,keyboard:true}).addTo(map).bindPopup(`<div class="pl-pop"><div class="pl-loc">${esc(p.city.toLowerCase())}</div><b>${esc(p.name)}</b><p>${esc(p.note)}</p><a href="${esc(p.link)}" target="_blank" rel="noopener">directions →</a></div>`,{closeButton:false,maxWidth:260}));
+  const fit=r=>{const ll=P.map((p,i)=>[p,i]).filter(([p])=>r==='Everywhere'||REG(p)===r).map(([p])=>[p.lat,p.lng]);if(ll.length===1)map.flyTo(ll[0],12,{duration:RM?0:1.2});else map.flyToBounds(ll,{padding:[40,40],maxZoom:14,duration:RM?0:1.2})};
+  map.fitBounds(P.map(p=>[p.lat,p.lng]),{padding:[30,30]});
+  rb.onclick=e=>{const b=e.target.closest('.pl-reg');if(!b)return;rb.querySelectorAll('.pl-reg').forEach(x=>x.classList.toggle('on',x===b));const r=b.dataset.r;list.querySelectorAll('.pl-card').forEach(c=>c.classList.toggle('dim',r!=='Everywhere'&&c.dataset.r!==r));fit(r)};
+  list.onclick=e=>{const b=e.target.closest('.pl-go');if(!b)return;const i=+b.closest('.pl-card').dataset.i;map.flyTo([P[i].lat,P[i].lng],P[i].city.match(/paris/i)?15:12,{duration:RM?0:1.4});M[i].openPopup();m.scrollIntoView({behavior:RM?'auto':'smooth',block:'center'})};
+  list.querySelectorAll('.pl-card').forEach(c=>{const i=+c.dataset.i;c.onmouseenter=()=>M[i].getElement()?.classList.add('hot');c.onmouseleave=()=>M[i].getElement()?.classList.remove('hot')});
+ };
+ if(window.L)go();else{const s=document.createElement('script');s.src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';s.onload=go;document.head.appendChild(s)}}
 function nav(){const n=document.getElementById('topnav');const onS=()=>{n.classList.toggle('solid',scrollY>80);let cur='';document.querySelectorAll('.chapter').forEach(c=>{if(c.getBoundingClientRect().top<innerHeight*.4)cur=c.id});n.querySelectorAll('.links a').forEach(a=>a.classList.toggle('cur',a.getAttribute('href')==='#'+cur))};addEventListener('scroll',onS,{passive:true});onS()}
 function composeNote(){const s=window.__seed;if(!s)return;
  const el=document.getElementById('dnote');el.innerHTML=s.noteShort.map(l=>`<span class="ln">${l}</span>`).join('')+'<span class="sigline">— Random</span>';

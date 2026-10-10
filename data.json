@@ -1960,5 +1960,96 @@
    "imageSource": "original"
   }
  ],
- "places": []
+ "places": [
+  {
+   "name": "Idyllwild",
+   "city": "San Jacinto Mountains, California",
+   "lat": 33.7402774,
+   "lng": -116.718942,
+   "note": "Pine country above the desert, high in the San Jacinto Mountains.",
+   "link": "https://www.google.com/maps/dir/?api=1&destination=33.7402774,-116.718942",
+   "image": ""
+  },
+  {
+   "name": "Point Dume",
+   "city": "Malibu, California",
+   "lat": 34.001631,
+   "lng": -118.8066756,
+   "note": "A headland over the Pacific at the western edge of Malibu. Go before sunset.",
+   "link": "https://www.google.com/maps/dir/?api=1&destination=34.001631,-118.8066756",
+   "image": ""
+  },
+  {
+   "name": "37.79292° N, 122.44645° W",
+   "city": "Pacific Heights, San Francisco",
+   "lat": 37.79292,
+   "lng": -122.44645,
+   "note": "Where Lyon Street climbs toward Broadway. The coordinates are the invitation.",
+   "link": "https://www.google.com/maps/dir/?api=1&destination=37.79292,-122.44645",
+   "image": ""
+  },
+  {
+   "name": "Place de la Contrescarpe",
+   "city": "Rue Mouffetard, Paris 5e",
+   "lat": 48.8443715,
+   "lng": 2.3494954,
+   "note": "The small square at the top of Rue Mouffetard. Sit, order, stay.",
+   "link": "https://www.google.com/maps/dir/?api=1&destination=48.8443715,2.3494954",
+   "image": ""
+  },
+  {
+   "name": "Jardin des Plantes",
+   "city": "Paris 5e",
+   "lat": 48.844036,
+   "lng": 2.3597321,
+   "note": "The old botanical garden on the Left Bank, best on a weekday morning.",
+   "link": "https://www.google.com/maps/dir/?api=1&destination=48.844036,2.3597321",
+   "image": ""
+  },
+  {
+   "name": "The Panthéon",
+   "city": "Paris 5e",
+   "lat": 48.8461947,
+   "lng": 2.3460507,
+   "note": "The dome over the Latin Quarter, where France keeps its great names.",
+   "link": "https://www.google.com/maps/dir/?api=1&destination=48.8461947,2.3460507",
+   "image": ""
+  },
+  {
+   "name": "Biville",
+   "city": "La Hague, Manche, Normandy",
+   "lat": 49.6129876,
+   "lng": -1.8223477,
+   "note": "A village above the dunes on the Cotentin coast. Wind, sand, and very little else.",
+   "link": "https://www.google.com/maps/dir/?api=1&destination=49.6129876,-1.8223477",
+   "image": ""
+  },
+  {
+   "name": "Sotteville",
+   "city": "Manche, Normandy",
+   "lat": 49.5396722,
+   "lng": -1.7551133,
+   "note": "A quiet commune a few miles from Biville, in the Cotentin countryside.",
+   "link": "https://www.google.com/maps/dir/?api=1&destination=49.5396722,-1.7551133",
+   "image": ""
+  },
+  {
+   "name": "Wynn Las Vegas",
+   "city": "Las Vegas, Nevada",
+   "lat": 36.1266219,
+   "lng": -115.1654043,
+   "note": "The Strip, in bronze glass. Dress for dinner.",
+   "link": "https://www.google.com/maps/dir/?api=1&destination=36.1266219,-115.1654043",
+   "image": ""
+  },
+  {
+   "name": "Sawgrass Marriott Golf Resort & Spa",
+   "city": "Ponte Vedra Beach, Florida",
+   "lat": 30.202786,
+   "lng": -81.3857711,
+   "note": "Golf country at Ponte Vedra Beach, south of Jacksonville.",
+   "link": "https://www.google.com/maps/dir/?api=1&destination=30.202786,-81.3857711",
+   "image": ""
+  }
+ ]
 }
